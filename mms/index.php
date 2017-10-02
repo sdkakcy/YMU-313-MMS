@@ -1,7 +1,7 @@
 <?php
 
 echo("Hello word");
-echo("\nmerhaba");
+echo("<br>merhaba");
 
 ?>
 
