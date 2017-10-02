@@ -1,7 +1,11 @@
 <?php
 
 echo("Hello word");
-<br>echo("merhaba");
+echo("\nmerhaba");
+echo("\nhi");
 
 ?>
+
+
+
 
