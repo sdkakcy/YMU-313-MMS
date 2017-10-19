@@ -1,6 +1,6 @@
 <?php
 
-echo("Hello word");
+echo"Hello word"."<br>"."asd";
 echo "<br>";
 echo("merhaba");
 
