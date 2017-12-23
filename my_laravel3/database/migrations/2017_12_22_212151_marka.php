@@ -1,4 +1,4 @@
-<?php
+->nullable()<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,8 +15,8 @@ class Marka extends Migration
     {
         Schema::create('marka', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('marka_adi');
-            $table->integer('kategori_id');
+            $table->string('marka_adi')->nullable();
+            $table->integer('kategori_id')->nullable();
             $table->timestamps();
         });
     }

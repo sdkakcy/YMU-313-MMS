@@ -1,4 +1,4 @@
-<?php
+->nullable()<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,11 +15,11 @@ class Urun extends Migration
     {
         Schema::create('urun', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('urun_barkod');
-            $table->string('urun_adi');
-            $table->string('urun_agirligi');
-            $table->integer('urun_adet');
-            $table->integer('marka_id');
+            $table->string('urun_barkod')->nullable();
+            $table->string('urun_adi')->nullable();
+            $table->string('urun_agirligi')->nullable();
+            $table->integer('urun_adet')->nullable();
+            $table->integer('marka_id')->nullable();
             $table->timestamps();
         });
     }

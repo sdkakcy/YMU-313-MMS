@@ -1,4 +1,4 @@
-<?php
+->nullable()<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,11 +15,13 @@ class Sube extends Migration
     {
         Schema::create('sube', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sube_kodu')->unique();
-            $table->string('sube_adi');
-            $table->string('sifre');
-            $table->integer('konum_id');
-            $table->integer('sirket_id');
+            $table->string('sube_kodu')->unique()->nullable();
+            $table->string('sube_adi')->nullable();
+          
+            $table->string('eposta')->unique()->nullable();
+          
+            $table->integer('konum_id')->nullable();
+            $table->integer('sirket_id')->nullable();
             $table->timestamps();
         });
     }

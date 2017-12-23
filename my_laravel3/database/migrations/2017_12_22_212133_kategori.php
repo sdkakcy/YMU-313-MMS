@@ -1,4 +1,4 @@
-<?php
+->nullable()<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,9 +15,9 @@ class Kategori extends Migration
     {
         Schema::create('kategori', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kategori_adi');
-            $table->integer('altKategori');
-            $table->integer('ebeveyn_id');
+            $table->string('kategori_adi')->nullable();
+            $table->integer('altKategori')->nullable();
+            $table->integer('ebeveyn_id')->nullable();
             $table->timestamps();
         });
     }

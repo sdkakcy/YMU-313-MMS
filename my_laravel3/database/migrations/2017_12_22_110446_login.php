@@ -15,10 +15,10 @@ class Login extends Migration
     {
         Schema::create('login', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ad');
-            $table->string('eposta')->unique();
-            $table->string('sifre');
-            $table->integer('yetki');
+            $table->string('kadi')->nullable();
+            $table->string('eposta')->unique()->nullable();
+            $table->string('sifre')->nullable();
+            $table->integer('yetki')->nullable();
             $table->timestamps();
         });
     }
