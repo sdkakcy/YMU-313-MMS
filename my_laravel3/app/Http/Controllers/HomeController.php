@@ -27,11 +27,11 @@ class HomeController extends Controller
     {
         $login = new login();
 
-        $ad     = $request->ad;
+        $kadi     = $request->kadi;
         $eposta = $request->eposta;
         $sifre  = $request->sifre;
 
-        $giris=login::where(['ad' =>$ad ,'sifre' =>$sifre])->get();
+        $giris=login::where(['kadi' =>$kadi ,'sifre' =>$sifre])->get();
         if(count($giris)>0)
         {
             echo 'doğru bilgi';
@@ -42,6 +42,7 @@ class HomeController extends Controller
             if($giris[0]->yetki==1)
             {
                 return redirect()->route('route.index');
+
             }else if($giris[0]->yetki==2){
                 return redirect()->action('HomeController@sirket');
             }

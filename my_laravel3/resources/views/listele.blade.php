@@ -22,7 +22,6 @@
 								<th>AD</th>
 								<th>SOYAD</th>
 								<th>E-POSTA</th>
-								<th>ŞİFRE</th>
 								<th>CEP NO</th>
 								<th>TUR</th>
 								<th>TİCARİ UNVAN</th>
@@ -44,7 +43,6 @@
 										<th>{{$satir->ad}}</th>
 										<th>{{$satir->soyad}}</th>
 										<th>{{$satir->eposta}}</th>
-										<th>{{$satir->sifre}}</th>
 										<th>{{$satir->cep}}</th>
 										<th>{{$satir->tur}}</th>
 										<th>{{$satir->ticari_unvan}}</th>

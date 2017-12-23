@@ -8,6 +8,14 @@
 {{Form::text('sube_adi','')}}
 <br>
 <br>
+{{Form::label('Kullanıcı Adı:','')}}
+{{Form::text('kadi','')}}
+<br>
+<br>
+{{Form::label('E-posta:','')}}
+{{Form::text('eposta','')}}
+<br>
+<br>
 {{Form::label('sifre:','')}}
 {{Form::text('sifre','')}}
 <br>

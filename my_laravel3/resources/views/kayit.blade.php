@@ -12,6 +12,10 @@
 {{Form::text('eposta','')}}
 <br>
 <br>
+{{Form::label('Kullanıcı Adı:','')}}
+{{Form::text('kadi','')}}
+<br>
+<br>
 {{Form::label('Şifre:','')}}
 {{Form::text('sifre','')}}
 <br>

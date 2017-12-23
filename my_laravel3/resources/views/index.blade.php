@@ -2,7 +2,7 @@
 {!! Form::open(['action' => 'HomeController@post_login'])!!}
  
 {{Form::label('Ad:','')}}
-{{Form::text('ad','')}}
+{{Form::text('kadi','')}}
 <br>
 <br>
 {{Form::label('Sifre:','')}}

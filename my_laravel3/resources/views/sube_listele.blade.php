@@ -19,7 +19,7 @@
 								<th>#</th>
 								<th>ŞUBE KODU</th>
 								<th>ŞUBE ADI</th>
-								<th>ŞİFRE</th>
+								<th>E-POSTA</th>
 								<th>KONUM ID</th>
 								<th>ŞİRKET ID</th>
 								<th>Created At</th>
@@ -34,7 +34,7 @@
 										<th>{{$satir->id}}</th>
 										<th>{{$satir->sube_kodu}}</th>
 										<th>{{$satir->sube_adi}}</th>
-										<th>{{$satir->sifre}}</th>
+										<th>{{$satir->eposta}}</th>
 										<th>{{$satir->konum_id}}</th>
 										<th>{{date('M j, Y H:i' , strtotime($satir->created_at))}}</th>
 										<th>{{date('M j, Y H:i' , strtotime($satir->updated_at))}}</th>

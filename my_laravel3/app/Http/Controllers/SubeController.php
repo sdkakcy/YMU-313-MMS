@@ -44,11 +44,12 @@ class SubeController extends Controller
         //şube tablosu
         $sube->sube_kodu     = $request->sube_kodu;
         $sube->sube_adi      = $request->sube_adi;
-        $sube->sifre         = $request->sifre;
+        $sube->eposta         = $request->eposta;
         $sube->konum_id      = $request->konum_id;
 
         //login tablosu
-        $login->ad            = $request->sube_kodu;
+        $login->kadi            = $request->kadi;
+        $login->eposta            = $request->eposta;
         $login->sifre         = $request->sifre;
         $login->yetki         = 3; 
 

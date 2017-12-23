@@ -45,7 +45,6 @@ class sirketController extends Controller
         $sirket->ad            = $request->ad;
         $sirket->soyad         = $request->soyad;
         $sirket->eposta        = $request->eposta;
-        $sirket->sifre         = $request->sifre;
         $sirket->cep           = $request->cep;
         $sirket->tur           = $request->tur;
         $sirket->ticari_unvan  = $request->ticari_unvan;
@@ -56,7 +55,7 @@ class sirketController extends Controller
         $sirket->konum_id      = $request->konum_id;
 
         //login tablosu
-        $login->ad            = $request->ad;
+        $login->kadi            = $request->kadi;
         $login->eposta        = $request->eposta;
         $login->sifre         = $request->sifre;
         $login->yetki         = 2;
