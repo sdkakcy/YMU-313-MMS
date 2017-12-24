@@ -36,6 +36,7 @@
 										<th>{{$satir->sube_adi}}</th>
 										<th>{{$satir->eposta}}</th>
 										<th>{{$satir->konum_id}}</th>
+										<th>{{$satir->sirket_id}}</th>
 										<th>{{date('M j, Y H:i' , strtotime($satir->created_at))}}</th>
 										<th>{{date('M j, Y H:i' , strtotime($satir->updated_at))}}</th>
 										<th><a href="{{route ('sube.edit' , $satir->id)}}" class="btn btn-dafault btn-sm">Edit</a></th>

@@ -1,3 +1,8 @@
+
+@if (Session::has('giris'))
+	
+	<h1>{{Session::get('giris')}}</h1>
+@endif 
 {!! Form::open(['route' => 'route.store']) !!}
  
 {{Form::label('Ad:','')}}

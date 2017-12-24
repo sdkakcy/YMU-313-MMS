@@ -1,3 +1,8 @@
+@if (Session::has('login_id') && Session::has('sirket_id'))
+	
+	<h1>Login id  :{{Session::get('login_id')}}</h1>
+	<h1>Şirket id :{{Session::get('sirket_id')}}</h1>
+@endif 
 {!! Form::open(['route' => 'sube.store']) !!}
  
 {{Form::label('sube_kodu:','')}}

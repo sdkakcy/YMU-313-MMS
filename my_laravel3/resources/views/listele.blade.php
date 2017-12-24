@@ -3,7 +3,10 @@
 <div class="row">
 			<div class="col-md-10">
 
-				<h1>All Posts</h1>				
+				<h1>All Posts</h1>
+				@if (Session::has('giris'))
+						<h1>{{Session::get('giris')}}</h1>
+				@endif 
 			</div>
 			<div class="row">
 				<div class="col-md-2">

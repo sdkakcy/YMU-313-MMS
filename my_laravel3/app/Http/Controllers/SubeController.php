@@ -16,8 +16,15 @@ class SubeController extends Controller
      */
     public function index()
     {
-        $sube = sube::all();
-        return view('sube_listele')->with('sube',$sube);
+        if (Session::has('login_id') && Session::has('sirket_id'))
+            {
+                //$sube = sube::all();
+                //$sube = sube::find(Session::get('sirket_id'));
+                $id = Session::get('sirket_id');
+                $sube=sube::where(['sirket_id' => $id])->get();
+                return view('sube_listele')->with('sube',$sube);
+            }
+        
     }
 
     /**
@@ -41,11 +48,20 @@ class SubeController extends Controller
         $sube = new sube();
         $login = new login();
 
+
         //şube tablosu
         $sube->sube_kodu     = $request->sube_kodu;
         $sube->sube_adi      = $request->sube_adi;
         $sube->eposta         = $request->eposta;
         $sube->konum_id      = $request->konum_id;
+
+        if (Session::has('login_id') && Session::has('sirket_id'))
+            {
+                $sube->sirket_id = Session::get('sirket_id');
+            }
+            
+            
+        
 
         //login tablosu
         $login->kadi            = $request->kadi;
