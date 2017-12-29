@@ -21,7 +21,7 @@ class HomeController extends Controller
     }
     function sirket()
     {
-        return view('sirket_anasayfa');
+        return view('backend.pages.adminsirket');
     }
 
     function post_login(Request $request)
@@ -63,6 +63,7 @@ class HomeController extends Controller
                 $sube_table=sirket::where(['eposta' =>$e_posta])->get();
                 Session::put('login_id', $giris[0]->id);
                 Session::put('sube_id', $sube_table[0]->id);
+                return redirect()->action('uruncontroller@index');
             }
         }
         else

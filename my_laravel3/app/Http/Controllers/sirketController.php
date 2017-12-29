@@ -17,7 +17,7 @@ class sirketController extends Controller
     public function index()
     {
         $sirket = sirket::all();
-        return view('listele')->with('sirket',$sirket);
+        return view('backend.pages.admin')->with('sirket',$sirket);
     }
 
     /**
@@ -89,7 +89,7 @@ class sirketController extends Controller
     public function edit($id)
     {
         $sirket =sirket::find($id);
-        return view('sirket_bilgi_guncelle')->with('sirket',$sirket);
+        return view('backend.pages.sirket_bilgi_guncelle')->with('sirket',$sirket);
     }
 
     /**
@@ -103,7 +103,7 @@ class sirketController extends Controller
     {
         $sirket =sirket::find($id);
 
-        
+
         $sirket->ad            = $request->ad;
         $sirket->soyad         = $request->soyad;
         $sirket->eposta        = $request->eposta;

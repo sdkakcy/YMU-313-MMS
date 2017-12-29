@@ -1,11 +1,11 @@
 <div class="row">
 			<div class="col-md-10">
 
-				<h1>All Posts</h1>				
+				<h1> all post</h1>
 			</div>
 			<div class="row">
 				<div class="col-md-2">
-					<a href="{{ route('sube.create') }}" class="btn btn-lg btn-block primary">Create New Post</a>
+					<a href="" class="btn btn-lg btn-block primary">Create New Post</a>
 					<a href="/sirket_anasayfa" class="btn btn-lg btn-block primary">Cancel</a>
 				</div>
 				<div class="col-md-12">
@@ -45,21 +45,21 @@
 											{{Form::submit('SİL' , ['class' =>'btn btn-danger btn-block'])}}
 											{!!Form::close()!!}
 										</th>
-										
-										
+
+
 									</tr>
 								@endforeach
 							</tbody>
-							
+
 						</table>
 						<div class="text-center">
-							
+
 						</div>
-							
+
 					</div>
-					
+
 				</div>
 
 			</div>
-			
+
 		</div>

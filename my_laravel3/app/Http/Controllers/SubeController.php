@@ -22,9 +22,11 @@ class SubeController extends Controller
                 //$sube = sube::find(Session::get('sirket_id'));
                 $id = Session::get('sirket_id');
                 $sube=sube::where(['sirket_id' => $id])->get();
-                return view('sube_listele')->with('sube',$sube);
+
+                return view('backend.pages.sube_listele')->with('sube',$sube);
+
             }
-        
+
     }
 
     /**
@@ -34,7 +36,7 @@ class SubeController extends Controller
      */
     public function create()
     {
-        return view('sube_kayit');
+        return view('backend.pages.sube_kayit');
     }
 
     /**
@@ -59,22 +61,22 @@ class SubeController extends Controller
             {
                 $sube->sirket_id = Session::get('sirket_id');
             }
-            
-            
-        
+
+
+
 
         //login tablosu
         $login->kadi            = $request->kadi;
         $login->eposta            = $request->eposta;
         $login->sifre         = $request->sifre;
-        $login->yetki         = 3; 
+        $login->yetki         = 3;
 
         //şirket tablosuna kaydet
         $sube->save();
         //login tablosuna kaydet
         $login->save();
 
-        return redirect()->route('sube.index');
+        return redirect()->route('map');
     }
 
     /**
@@ -99,7 +101,7 @@ class SubeController extends Controller
 
         $sube =sube::find($id);
 
-        return view('sube_bilgi_guncelle')->with('sube',$sube);
+        return view('backend.pages.sube_bilgi_guncelle')->with('sube',$sube);
     }
 
     /**
@@ -113,10 +115,10 @@ class SubeController extends Controller
     {
         $sube =sube::find($id);
 
-        
+
         $sube->sube_kodu    = $request->sube_kodu;
         $sube->sube_adi     = $request->sube_adi;
-        $sube->sifre        = $request->sifre;
+
         $sube->konum_id     = $request->konum_id;
 
         $sube ->save();
@@ -134,5 +136,24 @@ class SubeController extends Controller
         $sube =sube::find($id);
         $sube->delete();
         return redirect()->route('sube.index');
+    }
+
+    public function mapsave(Request $request)
+    {
+
+      $map = new map();
+
+
+
+      //şube tablosu
+      $map->lat    = $request->lat;
+      $map->lon      = $request->lon;
+
+
+
+
+      //şirket tablosuna kaydet
+      $map->save();
+      return 'selam';
     }
 }
